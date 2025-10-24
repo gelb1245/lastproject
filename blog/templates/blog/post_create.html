@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block title %}Нова публікація{% endblock %}
+{% block content %}
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h3>Створити нову публікацію</h3>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-success">Опублікувати</button>
+            <a href="/" class="btn btn-secondary">Скасувати</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
